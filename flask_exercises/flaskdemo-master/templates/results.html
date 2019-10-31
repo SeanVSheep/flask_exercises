@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block title %}Wikipedia Results{% endblock %}
+{% block content %}
+{% if page %}
+<h1>{{ page.title }}</h1>
+  <h2>Summary </h2>
+    <p>{{ page.summary }}</p>
+    <p><a href="{{ page.url }}"> {{ page.title }}</a> </p>
+{% else %}
+  <h1>return render_template("results.html", page=page, title=page)</h1>
+{% endif %}
+{% endblock %}
